@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.quick-actions{&#13;
+&#13;
+    display:flex;&#13;
+    justify-content:center;&#13;
+    gap:35px;&#13;
+    flex-wrap:wrap;&#13;
+    padding:70px 30px;&#13;
+    background:linear-gradient(135deg,#f5f7fa,#eef3f8);&#13;
+&#13;
+}&#13;
+&#13;
+.card{&#13;
+&#13;
+    position:relative;&#13;
+    overflow:hidden;&#13;
+    width:260px;&#13;
+    background:#ffffff;&#13;
+    border-radius:18px;&#13;
+    padding:35px 30px;&#13;
+    text-align:center;&#13;
+    box-shadow:0 10px 25px rgba(15,76,129,.10);&#13;
+    border-top:6px solid #0F4C81;&#13;
+    transition:all .4s ease;&#13;
+&#13;
+}&#13;
+&#13;
+.card::before{&#13;
+&#13;
+    content:"";&#13;
+    position:absolute;&#13;
+    top:0;&#13;
+    left:-120%;&#13;
+    width:100%;&#13;
+    height:100%;&#13;
+    background:linear-gradient(&#13;
+        90deg,&#13;
+        transparent,&#13;
+        rgba(255,255,255,.45),&#13;
+        transparent&#13;
+    );&#13;
+    transition:.8s;&#13;
+&#13;
+}&#13;
+&#13;
+.card:hover::before{&#13;
+&#13;
+    left:120%;&#13;
+&#13;
+}&#13;
+&#13;
+.card:hover{&#13;
+&#13;
+    transform:translateY(-12px) scale(1.04);&#13;
+    box-shadow:0 18px 35px rgba(15,76,129,.18);&#13;
+&#13;
+}&#13;
+&#13;
+.icon{&#13;
+&#13;
+    width:85px;&#13;
+    height:85px;&#13;
+    margin:0 auto 22px;&#13;
+    display:flex;&#13;
+    align-items:center;&#13;
+    justify-content:center;&#13;
+    font-size:42px;&#13;
+    background:linear-gradient(135deg,#0F4C81,#1E6BB8);&#13;
+    color:#ffffff;&#13;
+    border-radius:50%;&#13;
+    box-shadow:0 8px 18px rgba(15,76,129,.20);&#13;
+    transition:.4s;&#13;
+&#13;
+}&#13;
+&#13;
+.card:hover .icon{&#13;
+&#13;
+    transform:rotate(12deg) scale(1.12);&#13;
+&#13;
+}&#13;
+&#13;
+.card h3{&#13;
+&#13;
+    margin:12px 0;&#13;
+    color:#0F4C81;&#13;
+    font-size:24px;&#13;
+    font-weight:700;&#13;
+&#13;
+}&#13;
+&#13;
+.card p{&#13;
+&#13;
+    color:#666;&#13;
+    font-size:15px;&#13;
+    line-height:1.8;&#13;
+    min-height:60px;&#13;
+    margin-bottom:25px;&#13;
+&#13;
+}&#13;
+&#13;
+.request-btn{&#13;
+&#13;
+    display:inline-block;&#13;
+    padding:13px 28px;&#13;
+    border-radius:8px;&#13;
+    text-decoration:none;&#13;
+    background:linear-gradient(135deg,#D4A017,#F2C94C);&#13;
+    color:#ffffff;&#13;
+    font-size:15px;&#13;
+    font-weight:700;&#13;
+    letter-spacing:.4px;&#13;
+    transition:.35s;&#13;
+    box-shadow:0 8px 18px rgba(212,160,23,.25);&#13;
+&#13;
+}&#13;
+&#13;
+.request-btn:hover{&#13;
+&#13;
+    background:linear-gradient(135deg,#B88A0F,#D4A017);&#13;
+    color:#ffffff;&#13;
+    text-decoration:none;&#13;
+    transform:translateY(-3px);&#13;
+    box-shadow:0 14px 28px rgba(212,160,23,.35);&#13;
+&#13;
+}&#13;
+&#13;
+@media(max-width:992px){&#13;
+&#13;
+    .quick-actions{&#13;
+&#13;
+        gap:25px;&#13;
+&#13;
+    }&#13;
+&#13;
+    .card{&#13;
+&#13;
+        width:300px;&#13;
+&#13;
+    }&#13;
+&#13;
+}&#13;
+&#13;
+@media(max-width:768px){&#13;
+&#13;
+    .quick-actions{&#13;
+&#13;
+        flex-direction:column;&#13;
+        align-items:center;&#13;
+        padding:45px 20px;&#13;
+&#13;
+    }&#13;
+&#13;
+    .card{&#13;
+&#13;
+        width:100%;&#13;
+        max-width:360px;&#13;
+&#13;
+    }&#13;
+&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>enams_quick_actions</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ENAMS Quick Actions</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-03 17:41:19</sys_created_on>
+        <sys_id>d67cc6eac3b9cf94d7a5b8ddd4013185</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>ENAMS Quick Actions</sys_name>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_update_name>sp_widget_d67cc6eac3b9cf94d7a5b8ddd4013185</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-04 10:27:14</sys_updated_on>
+        <template><![CDATA[<div class="quick-actions">
+
+  <div class="card">
+      <div class="icon">]]>🔒<![CDATA[</div>
+      <h3>VPN Access</h3>
+      <p>Secure remote access for employees.</p>
+      <a href="?id=vpn_request" class="request-btn">Request</a>
+  </div>
+
+  <div class="card">
+      <div class="icon">]]>🔥<![CDATA[</div>
+      <h3>Firewall Change</h3>
+      <p>Create or modify firewall rules.</p>
+      <a href="?id=firewall_request" class="request-btn">Request</a>
+  </div>
+
+  <div class="card">
+      <div class="icon">]]>🌐<![CDATA[</div>
+      <h3>Static IP</h3>
+      <p>Allocate a new Static IP address.</p>
+      <a href="?id=static_ip_request" class="request-btn">Request</a>
+  </div>
+
+  <div class="card">
+      <div class="icon">]]>🔌<![CDATA[</div>
+      <h3>Port Activation</h3>
+      <p>Activate enterprise switch ports.</p>
+      <a href="?id=port_activation_request" class="request-btn">Request</a>
+  </div>
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

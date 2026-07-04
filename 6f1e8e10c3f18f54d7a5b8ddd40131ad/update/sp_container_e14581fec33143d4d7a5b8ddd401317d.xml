@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Static IP Request - Container 1</name>
+        <order>1</order>
+        <semantic_tag/>
+        <sp_page display_value="static_ip_request">e3f48dbec33143d4d7a5b8ddd4013115</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-04 07:08:07</sys_created_on>
+        <sys_id>e14581fec33143d4d7a5b8ddd401317d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Static IP Request - Container 1</sys_name>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_update_name>sp_container_e14581fec33143d4d7a5b8ddd401317d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-04 07:08:07</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+</record_update>

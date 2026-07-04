@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="6c671b49c3f50794d7a5b8ddd40131f4" sys_domain="global" table="x_1958816_enterp_0_network_request" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-06-29 07:17:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a8671b49c3f50794d7a5b8ddd40131fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1958816_enterp_0_network_request" name="x_1958816_enterp_0_network_request" sys_domain="global" view="Default view">6c671b49c3f50794d7a5b8ddd40131f4</sys_ui_form>
+            <sys_ui_section caption="Request Information" display_value="Request Information" name="x_1958816_enterp_0_network_request" sys_domain="global" view="Default view">0e5a9f68c3b90394d7a5b8ddd401317d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-06-29 07:17:07</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-06-29 07:17:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a4671b49c3f50794d7a5b8ddd40131fc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1958816_enterp_0_network_request" name="x_1958816_enterp_0_network_request" sys_domain="global" view="Default view">6c671b49c3f50794d7a5b8ddd40131f4</sys_ui_form>
+            <sys_ui_section caption="Processing" display_value="Processing" name="x_1958816_enterp_0_network_request" sys_domain="global" view="Default view">d0671b49c3f50794d7a5b8ddd40131ed</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-06-29 07:17:07</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-06-29 07:17:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>24675b49c3f50794d7a5b8ddd4013103</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1958816_enterp_0_network_request" name="x_1958816_enterp_0_network_request" sys_domain="global" view="Default view">6c671b49c3f50794d7a5b8ddd40131f4</sys_ui_form>
+            <sys_ui_section caption="Assignment" display_value="Assignment" name="x_1958816_enterp_0_network_request" sys_domain="global" view="Default view">90671b49c3f50794d7a5b8ddd40131f0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-06-29 07:17:07</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-06-29 07:17:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e4675b49c3f50794d7a5b8ddd401310a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1958816_enterp_0_network_request" name="x_1958816_enterp_0_network_request" sys_domain="global" view="Default view">6c671b49c3f50794d7a5b8ddd40131f4</sys_ui_form>
+            <sys_ui_section caption="Scheduling" display_value="Scheduling" name="x_1958816_enterp_0_network_request" sys_domain="global" view="Default view">1c671b49c3f50794d7a5b8ddd40131f1</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-06-29 07:17:07</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-06-29 07:17:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a0675b49c3f50794d7a5b8ddd4013112</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1958816_enterp_0_network_request" name="x_1958816_enterp_0_network_request" sys_domain="global" view="Default view">6c671b49c3f50794d7a5b8ddd40131f4</sys_ui_form>
+            <sys_ui_section caption="Completion" display_value="Completion" name="x_1958816_enterp_0_network_request" sys_domain="global" view="Default view">a4671b49c3f50794d7a5b8ddd40131f3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-06-29 07:17:07</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_1958816_enterp_0_network_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-06-29 07:17:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6c671b49c3f50794d7a5b8ddd40131f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1958816_enterp_0_network_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+            <sys_update_name>sys_ui_form_sections_6c671b49c3f50794d7a5b8ddd40131f4</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-06-29 07:17:07</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

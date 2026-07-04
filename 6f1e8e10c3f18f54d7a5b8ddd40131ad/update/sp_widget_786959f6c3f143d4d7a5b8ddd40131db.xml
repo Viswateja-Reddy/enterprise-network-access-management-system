@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.recent-requests{&#13;
+&#13;
+    padding:60px;&#13;
+    background:#ffffff;&#13;
+&#13;
+}&#13;
+&#13;
+.recent-requests h2{&#13;
+&#13;
+    text-align:center;&#13;
+    color:#0F4C81;&#13;
+    margin-bottom:35px;&#13;
+&#13;
+}&#13;
+&#13;
+.recent-table{&#13;
+&#13;
+    width:100%;&#13;
+    border-collapse:collapse;&#13;
+    background:white;&#13;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);&#13;
+&#13;
+}&#13;
+&#13;
+.recent-table th{&#13;
+&#13;
+    background:#0F4C81;&#13;
+    color:white;&#13;
+    padding:15px;&#13;
+&#13;
+}&#13;
+&#13;
+.recent-table td{&#13;
+&#13;
+    padding:15px;&#13;
+    border-bottom:1px solid #eeeeee;&#13;
+&#13;
+}&#13;
+&#13;
+.recent-table tr:hover{&#13;
+&#13;
+    background:#f8f9fc;&#13;
+&#13;
+}&#13;
+&#13;
+.view-all{&#13;
+&#13;
+    text-align:right;&#13;
+    margin-top:25px;&#13;
+&#13;
+}&#13;
+&#13;
+.view-all a{&#13;
+&#13;
+    color:#0F4C81;&#13;
+    text-decoration:none;&#13;
+    font-weight:bold;&#13;
+&#13;
+}&#13;
+&#13;
+.view-all a:hover{&#13;
+&#13;
+    text-decoration:underline;&#13;
+&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>enams_recent_requests</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ENAMS Recent Requests</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+    data.requests = [];
+
+    var gr = new GlideRecord('x_1958816_enterp_0_network_request');
+    gr.orderByDesc('sys_created_on');
+    gr.setLimit(5);
+    gr.query();
+
+    while (gr.next()) {
+
+        data.requests.push({
+            number: gr.getValue('number'),
+            request_type: gr.getDisplayValue('request_type'),
+            priority: gr.getDisplayValue('priority'),
+            state: gr.getDisplayValue('state')
+        });
+
+    }
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-04 08:36:29</sys_created_on>
+        <sys_id>786959f6c3f143d4d7a5b8ddd40131db</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ENAMS Recent Requests</sys_name>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_update_name>sp_widget_786959f6c3f143d4d7a5b8ddd40131db</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-04 08:48:51</sys_updated_on>
+        <template><![CDATA[<div class="recent-requests">
+
+    <h2>Recent My Requests</h2>
+
+    <table class="recent-table">
+
+        <thead>
+
+            <tr>
+                <th>Request No</th>
+                <th>Type</th>
+                <th>Priority</th>
+                <th>Status</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr ng-repeat="req in data.requests">
+
+                <td>{{req.number}}</td>
+                <td>{{req.request_type}}</td>
+                <td>{{req.priority}}</td>
+                <td>{{req.state}}</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="view-all">
+
+        <a href="?id=enams_my_requests">
+            View All Requests →
+        </a>
+
+    </div>
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

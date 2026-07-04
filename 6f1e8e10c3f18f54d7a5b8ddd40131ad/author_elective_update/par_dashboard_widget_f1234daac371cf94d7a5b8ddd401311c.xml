@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="DELETE">
+        <canvas display_value="">39234daac371cf94d7a5b8ddd4013118</canvas>
+        <component display_value="Donut">a2b0596cec6b9d49dd1ff9bf76b5084b</component>
+        <component_props>{"selectedElements":[],"configVersion":"23.0.0-ci-SNAPSHOT","showDataLabels":false,"dataLabelsType":"both","truncationType":"end","showRegister":true,"registerPosition":"bottom","registerOrientation":"horizontal","showRegisterOnSameLine":false,"showRegisterValue":false,"legendHorizontalAlignment":"center","legendExpandToFit":false,"showRegisterPercentage":false,"colorConfig":{"type":"default"},"newReporting":false,"enableAddZerosAtApi":true,"additionalGroupByConfig":[],"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Network Request","sourceType":"table","tableOrViewName":"x_1958816_enterp_0_network_request","filterQuery":"","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzE5NTg4MTZfZW50ZXJwXzBfbmV0d29ya19yZXF1ZXN0MTc4MzA4MTA2MzMzNA==","dataCategories":["trend","group","simple"]}],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":false,"contextMenuActions":[],"headerTitle":"Requests by State","headingLevel":2,"showBorder":true,"bareBorder":false,"telemetry":null,"showDataPassthrough":false,"showAdditionalGroupBySelector":false,"allowAdditionalGroupByPerMetric":false,"metrics":[{"dataSource":"dGFibGV4XzE5NTg4MTZfZW50ZXJwXzBfbmV0d29ya19yZXF1ZXN0MTc4MzA4MTA2MzMzNA==","id":"ZEdGaWJHVjRYekU1TlRnNE1UWmZaVzUwWlhKd1h6QmZibVYwZDI5eWExOXlaWEYxWlhOME1UYzRNekE0TVRBMk16TXpOQT09MTc4MzA4MTA2NjI2Nw==","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"groupBy":[{"groupBy":[{"dataSource":"dGFibGV4XzE5NTg4MTZfZW50ZXJwXzBfbmV0d29ya19yZXF1ZXN0MTc4MzA4MTA2MzMzNA==","groupByField":"state","isRange":false,"isChoice":true,"isPaBucket":false}],"maxNumberOfGroups":"ALL","numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":false,"disableRanges":false}],"filterPerMetric":[],"sortBy":"value","sortByOrder":"desc","trendBy":null,"showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"showTotalValue":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableClickAndStay":false,"showDataTable":false,"enableCustomEmptyState":false,"componentId":"870ghlvr","emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","refreshFrequency":null,"hideDevSettings":false,"configPropModifiers":{},"filterConfigurations":"@state.parFilters","showMaximumRange":false,"allowChangeDateRange":false,"showDateRangeByDefault":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"scoreType":null,"showChangeFrom":"previous","useCurrentDateForEnd":false,"period":"M","useDataCache":false,"cacheExpirationTime":0,"showCacheTime":true,"dateFormat":"default","showRefresh":true,"showFilterAsSeparateSeries":false,"userInfo":"@context.session.user","sharedContext":{},"colors":{}}</component_props>
+        <h>12</h>
+        <name/>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-03 12:20:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f1234daac371cf94d7a5b8ddd401311c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_update_name>par_dashboard_widget_f1234daac371cf94d7a5b8ddd401311c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-03 12:20:23</sys_updated_on>
+        <visualization/>
+        <w>12</w>
+        <widget_props/>
+        <x>0</x>
+        <y>0</y>
+    </par_dashboard_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</application>
+        <file_path/>
+        <instance_id>f62ab9523bff8ad4c55a348aa4e45aff</instance_id>
+        <instance_name>dev285960</instance_name>
+        <name>par_dashboard_widget_f1234daac371cf94d7a5b8ddd401311c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget"><par_dashboard_widget action="INSERT_OR_UPDATE"><canvas display_value="">39234daac371cf94d7a5b8ddd4013118</canvas><component display_value="Donut">a2b0596cec6b9d49dd1ff9bf76b5084b</component><component_props>{"selectedElements":[],"configVersion":"23.0.0-ci-SNAPSHOT","showDataLabels":false,"dataLabelsType":"both","truncationType":"end","showRegister":true,"registerPosition":"bottom","registerOrientation":"horizontal","showRegisterOnSameLine":false,"showRegisterValue":false,"legendHorizontalAlignment":"center","legendExpandToFit":false,"showRegisterPercentage":false,"colorConfig":{"type":"default"},"newReporting":false,"enableAddZerosAtApi":true,"additionalGroupByConfig":[],"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Network Request","sourceType":"table","tableOrViewName":"x_1958816_enterp_0_network_request","filterQuery":"","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzE5NTg4MTZfZW50ZXJwXzBfbmV0d29ya19yZXF1ZXN0MTc4MzA4MTA2MzMzNA==","dataCategories":["trend","group","simple"]}],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":false,"contextMenuActions":[],"headerTitle":"Requests by State","headingLevel":2,"showBorder":true,"bareBorder":false,"telemetry":null,"showDataPassthrough":false,"showAdditionalGroupBySelector":false,"allowAdditionalGroupByPerMetric":false,"metrics":[{"dataSource":"dGFibGV4XzE5NTg4MTZfZW50ZXJwXzBfbmV0d29ya19yZXF1ZXN0MTc4MzA4MTA2MzMzNA==","id":"ZEdGaWJHVjRYekU1TlRnNE1UWmZaVzUwWlhKd1h6QmZibVYwZDI5eWExOXlaWEYxWlhOME1UYzRNekE0TVRBMk16TXpOQT09MTc4MzA4MTA2NjI2Nw==","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"groupBy":[{"groupBy":[{"dataSource":"dGFibGV4XzE5NTg4MTZfZW50ZXJwXzBfbmV0d29ya19yZXF1ZXN0MTc4MzA4MTA2MzMzNA==","groupByField":"state","isRange":false,"isChoice":true,"isPaBucket":false}],"maxNumberOfGroups":"ALL","numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":false,"disableRanges":false}],"filterPerMetric":[],"sortBy":"value","sortByOrder":"desc","trendBy":null,"showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"showTotalValue":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableClickAndStay":false,"showDataTable":false,"enableCustomEmptyState":false,"componentId":"870ghlvr","emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","refreshFrequency":null,"hideDevSettings":false,"configPropModifiers":{},"filterConfigurations":"@state.parFilters","showMaximumRange":false,"allowChangeDateRange":false,"showDateRangeByDefault":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"scoreType":null,"showChangeFrom":"previous","useCurrentDateForEnd":false,"period":"M","useDataCache":false,"cacheExpirationTime":0,"showCacheTime":true,"dateFormat":"default","showRefresh":true,"showFilterAsSeparateSeries":false,"userInfo":"@context.session.user","sharedContext":{},"colors":{}}</component_props><h>12</h><name/><stored_component/><sys_class_name>par_dashboard_widget</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-07-03 12:20:23</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>f1234daac371cf94d7a5b8ddd401311c</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package><sys_policy/><sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope><sys_update_name>par_dashboard_widget_f1234daac371cf94d7a5b8ddd401311c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-07-03 12:20:23</sys_updated_on><visualization/><w>12</w><widget_props/><x>0</x><y>0</y></par_dashboard_widget></record_update>]]></payload>
+        <payload_hash>-1652622295</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>f6a8d250c3358f54d7a5b8ddd401312f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-03 12:20:23</sys_created_on>
+        <sys_id>bd234daac371cf94d7a5b8ddd401312b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19f27ec45100000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-03 12:20:23</sys_updated_on>
+        <type>PAR Dashboard Widget</type>
+        <update_guid>7d234daaa271cf9447a5462d8c07b42a</update_guid>
+        <update_guid_history>7d234daaa271cf9447a5462d8c07b42a:-1652622295</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">0e234daac371cf94d7a5b8ddd40131c1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-03 12:20:24</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_widget">par_dashboard_widget</sys_db_object>
+        <sys_id>4b0da4c6c25a4b60894d82d5107a6840</sys_id>
+        <sys_metadata>f1234daac371cf94d7a5b8ddd401311c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_scope_delete display_value="">31787800630643408b0c7c58657c3501</sys_scope_delete>
+        <sys_update_name>par_dashboard_widget_f1234daac371cf94d7a5b8ddd401311c</sys_update_name>
+        <sys_update_version display_value="par_dashboard_widget_f1234daac371cf94d7a5b8ddd401311c">bd234daac371cf94d7a5b8ddd401312b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-03 12:20:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

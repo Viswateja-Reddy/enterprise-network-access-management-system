@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.my-requests{&#13;
+&#13;
+    padding:60px;&#13;
+    background:#f5f7fa;&#13;
+    min-height:100vh;&#13;
+&#13;
+}&#13;
+&#13;
+.my-requests h1{&#13;
+&#13;
+    text-align:center;&#13;
+    color:#0F4C81;&#13;
+&#13;
+}&#13;
+&#13;
+.subtitle{&#13;
+&#13;
+    text-align:center;&#13;
+    margin-bottom:40px;&#13;
+    color:#666;&#13;
+&#13;
+}&#13;
+&#13;
+.toolbar{&#13;
+&#13;
+    display:flex;&#13;
+    justify-content:space-between;&#13;
+    margin-bottom:25px;&#13;
+    flex-wrap:wrap;&#13;
+    gap:15px;&#13;
+&#13;
+}&#13;
+&#13;
+.toolbar input{&#13;
+&#13;
+    width:320px;&#13;
+    padding:12px;&#13;
+    border:1px solid #ccc;&#13;
+    border-radius:6px;&#13;
+&#13;
+}&#13;
+&#13;
+.toolbar select{&#13;
+&#13;
+    padding:12px;&#13;
+    border:1px solid #ccc;&#13;
+    border-radius:6px;&#13;
+&#13;
+}&#13;
+&#13;
+.request-table{&#13;
+&#13;
+    width:100%;&#13;
+    border-collapse:collapse;&#13;
+    background:white;&#13;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);&#13;
+&#13;
+}&#13;
+&#13;
+.request-table th{&#13;
+&#13;
+    background:#0F4C81;&#13;
+    color:white;&#13;
+    padding:15px;&#13;
+&#13;
+}&#13;
+&#13;
+.request-table td{&#13;
+&#13;
+    padding:15px;&#13;
+    border-bottom:1px solid #eee;&#13;
+&#13;
+}&#13;
+&#13;
+.request-table tr:hover{&#13;
+&#13;
+    background:#f8f9fc;&#13;
+&#13;
+}&#13;
+&#13;
+.status{&#13;
+&#13;
+    padding:6px 14px;&#13;
+    border-radius:20px;&#13;
+    color:white;&#13;
+    font-weight:bold;&#13;
+    font-size:13px;&#13;
+&#13;
+}&#13;
+&#13;
+.pending{&#13;
+&#13;
+    background:#f39c12;&#13;
+&#13;
+}&#13;
+&#13;
+.approved{&#13;
+&#13;
+    background:#27ae60;&#13;
+&#13;
+}&#13;
+&#13;
+.completed{&#13;
+&#13;
+    background:#2980b9;&#13;
+&#13;
+}&#13;
+&#13;
+.rejected{&#13;
+&#13;
+    background:#e74c3c;&#13;
+&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>enams_my_requests</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ENAMS My Requests</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+    data.requests = [];
+
+    var gr = new GlideRecord('x_1958816_enterp_0_network_request');
+    gr.query();
+
+    while (gr.next()) {
+
+        data.requests.push({
+            number: gr.getValue('number'),
+            request_type: gr.getDisplayValue('request_type'),
+            priority: gr.getDisplayValue('priority'),
+            state: gr.getDisplayValue('state')
+        });
+
+    }
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-04 08:27:08</sys_created_on>
+        <sys_id>bf37ddb2c3f143d4d7a5b8ddd4013126</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>ENAMS My Requests</sys_name>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_update_name>sp_widget_bf37ddb2c3f143d4d7a5b8ddd4013126</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-04 09:00:17</sys_updated_on>
+        <template><![CDATA[<div class="my-requests">
+
+    <h1>My Requests</h1>
+
+    <p class="subtitle">
+        Track all your network access requests from one place.
+    </p>
+
+    <div class="toolbar">
+
+        <input
+            type="text"
+            ng-model="searchText"
+            placeholder="Search Requests...">
+
+        <select ng-model="statusFilter">
+
+            <option value="">All Status</option>
+            <option>Pending</option>
+            <option>Approved</option>
+            <option>Completed</option>
+
+        </select>
+
+    </div>
+
+    <table class="request-table">
+
+        <thead>
+
+            <tr>
+
+                <th>Request No</th>
+                <th>Request Type</th>
+                <th>Priority</th>
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr
+                ng-repeat="req in data.requests
+                | filter:searchText
+                | filter:{state:statusFilter}">
+
+                <td>{{req.number}}</td>
+
+                <td>{{req.request_type}}</td>
+
+                <td>{{req.priority}}</td>
+
+                <td>
+
+    <span
+        class="status"
+
+        ng-class="{
+
+            'pending': req.state=='Pending',
+
+            'approved': req.state=='Approved',
+
+            'completed': req.state=='Completed',
+
+            'rejected': req.state=='Rejected'
+
+        }">
+
+        {{req.state}}
+
+    </span>
+
+</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

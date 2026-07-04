@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="732bdbe8c3b90394d7a5b8ddd4013134" extends="task" label="Fulfillment Task" max_length="40" name="x_1958816_enterp_0_fulfillment_task" type="collection">
+        <element label="Completed On" max_length="40" name="completed_on" type="glide_date_time"/>
+        <element label="Implementation Notes" max_length="40" name="implementation_notes" type="html"/>
+        <element choice="1" default="Pending" label="Completion Status" mandatory="true" max_length="40" name="completion_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Failed" sequence="2" value="failed"/>
+                <element inactive_on_update="false" label="Completed" sequence="1" value="completed"/>
+            </choice>
+        </element>
+        <element label="Network Request" max_length="32" name="network_request" reference="x_1958816_enterp_0_network_request" type="reference"/>
+        <element label="Resolution Notes" max_length="40" name="resolution_notes" type="html"/>
+        <element choice="1" label="Task Type" mandatory="true" max_length="40" name="task_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="VPN Configuration" sequence="0" value="vpn_configuration"/>
+                <element inactive_on_update="false" label="DNS Configuration" sequence="4" value="dns_configuration"/>
+                <element inactive_on_update="false" label="Firewall Configuration" sequence="1" value="firewall_configuration"/>
+                <element inactive_on_update="false" label="Network Validation" sequence="5" value="network_validation"/>
+                <element inactive_on_update="false" label="Port Activation" sequence="3" value="port_activation"/>
+                <element inactive_on_update="false" label="Other" sequence="6" value="other"/>
+                <element inactive_on_update="false" label="Static IP Allocation" sequence="2" value="static_ip_allocation"/>
+            </choice>
+        </element>
+    </element>
+</database>

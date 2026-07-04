@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Validate Required By Date</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+
+    var requestType = g_form.getDisplayBox('request_type').value;
+    var requiredByDate = g_form.getValue('required_by_date');
+
+    if (requestType == 'Static IP Allocation' && requiredByDate == '') {
+
+        g_form.addErrorMessage(
+            'Required By Date is mandatory for Static IP Allocation requests.'
+        );
+
+        return false;
+    }
+
+    if (requiredByDate != '') {
+
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        var requiredDate = new Date(requiredByDate);
+
+        if (requiredDate < today) {
+
+            g_form.addErrorMessage(
+                'Required By Date cannot be earlier than today.'
+            );
+
+            return false;
+        }
+
+    }
+
+    return true;
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-01 08:52:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0a60c2b1c33d4b94d7a5b8ddd401310a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate Required By Date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_update_name>sys_script_client_0a60c2b1c33d4b94d7a5b8ddd401310a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-01 08:52:33</sys_updated_on>
+        <table>x_1958816_enterp_0_network_request</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

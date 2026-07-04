@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.dashboard{&#13;
+&#13;
+    padding:60px;&#13;
+    background:linear-gradient(135deg,#f5f7fa,#eef3f8);&#13;
+    min-height:100vh;&#13;
+&#13;
+}&#13;
+&#13;
+.dashboard h1{&#13;
+&#13;
+    text-align:center;&#13;
+    color:#0F4C81;&#13;
+    font-size:46px;&#13;
+    margin-bottom:15px;&#13;
+    font-weight:700;&#13;
+&#13;
+}&#13;
+&#13;
+.dashboard p{&#13;
+&#13;
+    text-align:center;&#13;
+    color:#666;&#13;
+    font-size:18px;&#13;
+    max-width:850px;&#13;
+    margin:0 auto 55px auto;&#13;
+    line-height:1.8;&#13;
+&#13;
+}&#13;
+&#13;
+.dashboard-grid{&#13;
+&#13;
+    display:flex;&#13;
+    justify-content:center;&#13;
+    gap:30px;&#13;
+    flex-wrap:wrap;&#13;
+    margin-bottom:70px;&#13;
+&#13;
+}&#13;
+&#13;
+.dash-card{&#13;
+&#13;
+    width:260px;&#13;
+    background:#ffffff;&#13;
+    border-radius:16px;&#13;
+    padding:35px;&#13;
+    text-align:center;&#13;
+    box-shadow:0 10px 25px rgba(15,76,129,.12);&#13;
+    transition:all .35s ease;&#13;
+    border-top:6px solid #0F4C81;&#13;
+    position:relative;&#13;
+    overflow:hidden;&#13;
+&#13;
+}&#13;
+&#13;
+.dash-card::before{&#13;
+&#13;
+    content:"";&#13;
+    position:absolute;&#13;
+    top:0;&#13;
+    left:-100%;&#13;
+    width:100%;&#13;
+    height:100%;&#13;
+    background:linear-gradient(90deg,&#13;
+    transparent,&#13;
+    rgba(255,255,255,.45),&#13;
+    transparent);&#13;
+&#13;
+    transition:.7s;&#13;
+&#13;
+}&#13;
+&#13;
+.dash-card:hover::before{&#13;
+&#13;
+    left:100%;&#13;
+&#13;
+}&#13;
+&#13;
+.dash-card:hover{&#13;
+&#13;
+    transform:translateY(-10px) scale(1.03);&#13;
+    box-shadow:0 18px 35px rgba(15,76,129,.18);&#13;
+&#13;
+}&#13;
+&#13;
+.dash-card h2{&#13;
+&#13;
+    color:#666;&#13;
+    font-size:20px;&#13;
+    margin-bottom:18px;&#13;
+&#13;
+}&#13;
+&#13;
+.dash-card h3{&#13;
+&#13;
+    color:#0F4C81;&#13;
+    font-size:48px;&#13;
+    margin:0;&#13;
+    font-weight:bold;&#13;
+&#13;
+}&#13;
+&#13;
+.analytics-section{&#13;
+&#13;
+    background:#ffffff;&#13;
+    border-radius:18px;&#13;
+    padding:55px;&#13;
+    text-align:center;&#13;
+    box-shadow:0 12px 28px rgba(15,76,129,.12);&#13;
+    transition:.35s;&#13;
+    border-top:6px solid #D4A017;&#13;
+&#13;
+}&#13;
+&#13;
+.analytics-section:hover{&#13;
+&#13;
+    transform:translateY(-8px);&#13;
+&#13;
+}&#13;
+&#13;
+.analytics-section h2{&#13;
+&#13;
+    color:#0F4C81;&#13;
+    font-size:34px;&#13;
+    margin-bottom:18px;&#13;
+&#13;
+}&#13;
+&#13;
+.analytics-section p{&#13;
+&#13;
+    color:#666;&#13;
+    font-size:18px;&#13;
+    max-width:800px;&#13;
+    margin:0 auto 35px auto;&#13;
+    line-height:1.8;&#13;
+&#13;
+}&#13;
+&#13;
+.analytics-btn{&#13;
+&#13;
+    background:linear-gradient(135deg,#0F4C81,#1E6BB8);&#13;
+    color:white;&#13;
+    border:none;&#13;
+    border-radius:10px;&#13;
+    padding:18px 42px;&#13;
+    font-size:18px;&#13;
+    font-weight:bold;&#13;
+    cursor:pointer;&#13;
+    transition:.35s;&#13;
+    box-shadow:0 8px 18px rgba(15,76,129,.25);&#13;
+&#13;
+}&#13;
+&#13;
+.analytics-btn:hover{&#13;
+&#13;
+    transform:translateY(-4px);&#13;
+    box-shadow:0 14px 28px rgba(15,76,129,.35);&#13;
+    background:linear-gradient(135deg,#0B3A62,#0F4C81);&#13;
+&#13;
+}&#13;
+&#13;
+@media(max-width:768px){&#13;
+&#13;
+    .dashboard{&#13;
+&#13;
+        padding:30px 20px;&#13;
+&#13;
+    }&#13;
+&#13;
+    .dashboard h1{&#13;
+&#13;
+        font-size:34px;&#13;
+&#13;
+    }&#13;
+&#13;
+    .dashboard-grid{&#13;
+&#13;
+        flex-direction:column;&#13;
+        align-items:center;&#13;
+&#13;
+    }&#13;
+&#13;
+    .dash-card{&#13;
+&#13;
+        width:100%;&#13;
+        max-width:340px;&#13;
+&#13;
+    }&#13;
+&#13;
+    .analytics-section{&#13;
+&#13;
+        padding:35px 20px;&#13;
+&#13;
+    }&#13;
+&#13;
+    .analytics-section h2{&#13;
+&#13;
+        font-size:28px;&#13;
+&#13;
+    }&#13;
+&#13;
+    .analytics-btn{&#13;
+&#13;
+        width:100%;&#13;
+&#13;
+    }&#13;
+&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>enams_executive_dashboard</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ENAMS Executive Dashboard</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+    data.total = 0;
+    data.approved = 0;
+    data.completed = 0;
+
+    var gr = new GlideRecord('x_1958816_enterp_0_network_request');
+    gr.query();
+
+    while (gr.next()) {
+
+        data.total++;
+
+        var state = gr.getDisplayValue('state');
+
+        if (state == "Approved")
+            data.approved++;
+
+        if (state == "Completed")
+            data.completed++;
+
+    }
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-04 09:05:02</sys_created_on>
+        <sys_id>b8ef9176c33543d4d7a5b8ddd4013179</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>ENAMS Executive Dashboard</sys_name>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_update_name>sp_widget_b8ef9176c33543d4d7a5b8ddd4013179</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-04 10:23:34</sys_updated_on>
+        <template><![CDATA[<div class="dashboard">
+
+    <h1>Executive Dashboard</h1>
+
+    <p>
+        Enterprise Network Access Management analytics and reporting.
+    </p>
+
+    <div class="dashboard-grid">
+
+        <div class="dash-card">
+            <h2>Total Requests</h2>
+            <h3>{{data.total}}</h3>
+        </div>
+
+        <div class="dash-card">
+            <h2>Approved</h2>
+            <h3>{{data.approved}}</h3>
+        </div>
+
+        <div class="dash-card">
+            <h2>Completed</h2>
+            <h3>{{data.completed}}</h3>
+        </div>
+
+    </div>
+
+    <div class="analytics-section">
+
+        <h2>Platform Analytics Dashboard</h2>
+
+        <p>
+            Access detailed analytics, interactive reports, charts, trends,
+            KPIs, and executive insights for Enterprise Network Access
+            Management.
+        </p>
+
+        <button class="analytics-btn"
+        onclick="window.open('https://dev285960.service-now.com/now/platform-analytics-workspace/dashboards/params/edit/false/sys-id/38fa386ac331cf94d7a5b8ddd4013134','_blank')">
+
+            ]]>📊<![CDATA[ View Executive Analytics Dashboard
+
+        </button>
+
+    </div>
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

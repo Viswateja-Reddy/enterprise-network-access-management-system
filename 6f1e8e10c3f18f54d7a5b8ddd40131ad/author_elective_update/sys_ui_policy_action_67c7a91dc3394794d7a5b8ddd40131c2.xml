@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>state</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>false</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-29 17:48:26</sys_created_on>
+        <sys_id>67c7a91dc3394794d7a5b8ddd40131c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>state</sys_name>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_update_name>sys_ui_policy_action_67c7a91dc3394794d7a5b8ddd40131c2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-29 17:48:26</sys_updated_on>
+        <table>x_1958816_enterp_0_network_request</table>
+        <ui_policy display_value="Draft Request Behavior">113769d9c3394794d7a5b8ddd401314a</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=67c7a91dc3394794d7a5b8ddd40131c2"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</application>
+        <file_path/>
+        <instance_id>f62ab9523bff8ad4c55a348aa4e45aff</instance_id>
+        <instance_name>dev285960</instance_name>
+        <name>sys_ui_policy_action_67c7a91dc3394794d7a5b8ddd40131c2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>true</disabled><field>state</field><field_message/><field_message_type>none</field_message_type><mandatory>false</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-06-29 17:48:26</sys_created_on><sys_id>67c7a91dc3394794d7a5b8ddd40131c2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>state</sys_name><sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package><sys_policy/><sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope><sys_update_name>sys_ui_policy_action_67c7a91dc3394794d7a5b8ddd40131c2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-06-29 17:48:26</sys_updated_on><table>x_1958816_enterp_0_network_request</table><ui_policy display_value="Draft Request Behavior">113769d9c3394794d7a5b8ddd401314a</ui_policy><value/><value_action>ignore</value_action><visible>true</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=67c7a91dc3394794d7a5b8ddd40131c2"/></record_update>]]></payload>
+        <payload_hash>-1297659353</payload_hash>
+        <record_name>state</record_name>
+        <reverted_from/>
+        <source>f6a8d250c3358f54d7a5b8ddd401312f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-29 17:48:26</sys_created_on>
+        <sys_id>d8e72d1dc3394794d7a5b8ddd40131b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19f147f2be80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-29 17:48:26</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>98e72d1dcc3947948d49cea04111c1b6</update_guid>
+        <update_guid_history>98e72d1dcc3947948d49cea04111c1b6:-1297659353</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-01 11:32:12</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>a3ef4e0e0957450c87db12c5edee09f1</sys_id>
+        <sys_metadata>67c7a91dc3394794d7a5b8ddd40131c2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>state</sys_name>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_parent display_value="Draft Request Behavior">113769d9c3394794d7a5b8ddd401314a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_scope_delete display_value="">31787800630643408b0c7c58657c3501</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_67c7a91dc3394794d7a5b8ddd40131c2</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_67c7a91dc3394794d7a5b8ddd40131c2">d8e72d1dc3394794d7a5b8ddd40131b7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-01 11:32:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

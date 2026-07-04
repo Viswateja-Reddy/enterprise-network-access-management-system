@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1958816_enterp_0.ENAMSUtility</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>ENAMSUtility</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var ENAMSUtility = Class.create();
+ENAMSUtility.prototype = {
+
+    initialize: function() {
+    },
+
+    getCurrentUserName: function() {
+
+        return gs.getUserName();
+
+    },
+
+    getCurrentDateTime: function() {
+
+        return new GlideDateTime().getDisplayValue();
+
+    },
+
+    generateAuditMessage: function(action) {
+
+        return action + " by " +
+               gs.getUserName() +
+               " on " +
+               new GlideDateTime().getDisplayValue();
+
+    },
+
+    type: 'ENAMSUtility'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-02 10:11:00</sys_created_on>
+        <sys_id>cdebd742c3b50f94d7a5b8ddd4013175</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ENAMSUtility</sys_name>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_update_name>sys_script_include_cdebd742c3b50f94d7a5b8ddd4013175</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-02 10:11:00</sys_updated_on>
+    </sys_script_include>
+</record_update>

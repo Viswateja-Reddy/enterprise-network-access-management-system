@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Validate Required By Date</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+
+    var requestType = g_form.getDisplayBox('request_type').value;
+    var requiredByDate = g_form.getValue('required_by_date');
+
+    if (requestType == 'Static IP Allocation' && requiredByDate == '') {
+
+        g_form.addErrorMessage(
+            'Required By Date is mandatory for Static IP Allocation requests.'
+        );
+
+        return false;
+    }
+
+    if (requiredByDate != '') {
+
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        var requiredDate = new Date(requiredByDate);
+
+        if (requiredDate < today) {
+
+            g_form.addErrorMessage(
+                'Required By Date cannot be earlier than today.'
+            );
+
+            return false;
+        }
+
+    }
+
+    return true;
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-30 14:34:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8dc44665c3f9c794d7a5b8ddd4013171</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Validate Required By Date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_update_name>sys_script_client_8dc44665c3f9c794d7a5b8ddd4013171</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-01 08:56:01</sys_updated_on>
+        <table>x_1958816_enterp_0_network_request</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</application>
+        <file_path/>
+        <instance_id>f62ab9523bff8ad4c55a348aa4e45aff</instance_id>
+        <instance_name>dev285960</instance_name>
+        <name>sys_script_client_8dc44665c3f9c794d7a5b8ddd4013171</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Validate Required By Date&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onSubmit() {
+
+    var requestType = g_form.getDisplayBox('request_type').value;
+    var requiredByDate = g_form.getValue('required_by_date');
+
+    if (requestType == 'Static IP Allocation' &amp;&amp; requiredByDate == '') {
+
+        g_form.addErrorMessage(
+            'Required By Date is mandatory for Static IP Allocation requests.'
+        );
+
+        return false;
+    }
+
+    if (requiredByDate != '') {
+
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        var requiredDate = new Date(requiredByDate);
+
+        if (requiredDate &lt; today) {
+
+            g_form.addErrorMessage(
+                'Required By Date cannot be earlier than today.'
+            );
+
+            return false;
+        }
+
+    }
+
+    return true;
+
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-06-30 14:34:03&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;8dc44665c3f9c794d7a5b8ddd4013171&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Validate Required By Date&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0"&gt;6f1e8e10c3f18f54d7a5b8ddd40131ad&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Enterprise Network Access Management System"&gt;6f1e8e10c3f18f54d7a5b8ddd40131ad&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_8dc44665c3f9c794d7a5b8ddd4013171&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-01 08:56:01&lt;/sys_updated_on&gt;&lt;table&gt;x_1958816_enterp_0_network_request&lt;/table&gt;&lt;type&gt;onSubmit&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2008199194</payload_hash>
+        <record_name>Validate Required By Date</record_name>
+        <reverted_from/>
+        <source>f6a8d250c3358f54d7a5b8ddd401312f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-01 08:56:01</sys_created_on>
+        <sys_id>b0310635c33d4b94d7a5b8ddd401314f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19f1ce473660000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-01 08:56:01</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>fc310635bc3d4b948cd077d16c49214d</update_guid>
+        <update_guid_history>fc310635bc3d4b948cd077d16c49214d:2008199194,db70c6b1873d4b941d803ca80e6037a2:73828365,1bfb6df120394b94457a8fd3a3f6798f:2008199194,17f621b56bf54b9455401ed5ae723e46:73828365,3a66a53544f54b9428429c201c2dbf72:2008199194,2ef4ce250af9c79473e7dad3d84b9ed8:73828365</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-01 09:06:08</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>54fbda151f2e4d20b613f770de93d240</sys_id>
+        <sys_metadata>8dc44665c3f9c794d7a5b8ddd4013171</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate Required By Date</sys_name>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_parent display_value="Enterp 0 Network Request">555a9f68c3b90394d7a5b8ddd4013162</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_scope_delete display_value="">31787800630643408b0c7c58657c3501</sys_scope_delete>
+        <sys_update_name>sys_script_client_8dc44665c3f9c794d7a5b8ddd4013171</sys_update_name>
+        <sys_update_version display_value="sys_script_client_8dc44665c3f9c794d7a5b8ddd4013171">b0310635c33d4b94d7a5b8ddd401314f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-01 09:06:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

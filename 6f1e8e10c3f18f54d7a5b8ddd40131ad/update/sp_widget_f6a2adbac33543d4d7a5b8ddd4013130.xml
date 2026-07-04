@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.admin-workspace{&#13;
+&#13;
+    padding:60px;&#13;
+    background:#f5f7fa;&#13;
+    min-height:100vh;&#13;
+&#13;
+}&#13;
+&#13;
+.workspace-header{&#13;
+&#13;
+    text-align:center;&#13;
+    margin-bottom:50px;&#13;
+&#13;
+}&#13;
+&#13;
+.workspace-header h1{&#13;
+&#13;
+    color:#0F4C81;&#13;
+    font-size:42px;&#13;
+    margin-bottom:15px;&#13;
+&#13;
+}&#13;
+&#13;
+.workspace-header p{&#13;
+&#13;
+    color:#666;&#13;
+    font-size:18px;&#13;
+&#13;
+}&#13;
+&#13;
+.summary-grid{&#13;
+&#13;
+    display:flex;&#13;
+    justify-content:center;&#13;
+    gap:25px;&#13;
+    flex-wrap:wrap;&#13;
+&#13;
+}&#13;
+&#13;
+.summary-card{&#13;
+&#13;
+    width:230px;&#13;
+    background:white;&#13;
+    padding:30px;&#13;
+    border-radius:12px;&#13;
+    text-align:center;&#13;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);&#13;
+    transition:.3s;&#13;
+&#13;
+}&#13;
+&#13;
+.summary-card:hover{&#13;
+&#13;
+    transform:translateY(-6px);&#13;
+&#13;
+}&#13;
+&#13;
+.summary-card h3{&#13;
+&#13;
+    color:#666;&#13;
+    margin-bottom:15px;&#13;
+&#13;
+}&#13;
+&#13;
+.summary-card h2{&#13;
+&#13;
+    color:#0F4C81;&#13;
+    font-size:38px;&#13;
+&#13;
+}&#13;
+.pending-section{&#13;
+&#13;
+    margin-top:60px;&#13;
+&#13;
+}&#13;
+&#13;
+.pending-section h2{&#13;
+&#13;
+    color:#0F4C81;&#13;
+    margin-bottom:20px;&#13;
+&#13;
+}&#13;
+&#13;
+.pending-table{&#13;
+&#13;
+    width:100%;&#13;
+    border-collapse:collapse;&#13;
+    background:white;&#13;
+    border-radius:12px;&#13;
+    overflow:hidden;&#13;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);&#13;
+&#13;
+}&#13;
+&#13;
+.pending-table th{&#13;
+&#13;
+    background:#0F4C81;&#13;
+    color:white;&#13;
+    padding:16px;&#13;
+    text-align:left;&#13;
+&#13;
+}&#13;
+&#13;
+.pending-table td{&#13;
+&#13;
+    padding:15px;&#13;
+    border-bottom:1px solid #e5e5e5;&#13;
+&#13;
+}&#13;
+&#13;
+.pending-table tr:hover{&#13;
+&#13;
+    background:#f7f9fc;&#13;
+&#13;
+}&#13;
+.tasks-section{&#13;
+&#13;
+    margin-top:60px;&#13;
+&#13;
+}&#13;
+&#13;
+.tasks-section h2{&#13;
+&#13;
+    color:#0F4C81;&#13;
+    margin-bottom:20px;&#13;
+&#13;
+}&#13;
+&#13;
+.tasks-table{&#13;
+&#13;
+    width:100%;&#13;
+    border-collapse:collapse;&#13;
+    background:#ffffff;&#13;
+    border-radius:12px;&#13;
+    overflow:hidden;&#13;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);&#13;
+&#13;
+}&#13;
+&#13;
+.tasks-table th{&#13;
+&#13;
+    background:#0F4C81;&#13;
+    color:#ffffff;&#13;
+    padding:16px;&#13;
+    text-align:left;&#13;
+&#13;
+}&#13;
+&#13;
+.tasks-table td{&#13;
+&#13;
+    padding:15px;&#13;
+    border-bottom:1px solid #e5e5e5;&#13;
+&#13;
+}&#13;
+&#13;
+.tasks-table tr:hover{&#13;
+&#13;
+    background:#f7f9fc;&#13;
+&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>enams_admin_workspace</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ENAMS Admin Workspace</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+    data.total = 0;
+    data.pending = 0;
+    data.approved = 0;
+    data.completed = 0;
+
+    data.requests = [];
+
+    var gr = new GlideRecord('x_1958816_enterp_0_network_request');
+    gr.query();
+
+    while(gr.next()){
+
+        data.total++;
+
+        var state = gr.getDisplayValue('state');
+
+        if(state == "Pending")
+            data.pending++;
+
+        if(state == "Approved")
+            data.approved++;
+
+        if(state == "Completed")
+            data.completed++;
+
+        if(state == "Pending"){
+
+            data.requests.push({
+
+                number : gr.getDisplayValue(),
+                type : gr.getDisplayValue('request_type'),
+                requester : gr.getDisplayValue('requested_for'),
+                priority : gr.getDisplayValue('priority'),
+                state : state
+
+            });
+
+        }
+
+    }
+data.tasks = [];
+
+var task = new GlideRecord('x_1958816_enterp_0_fulfillment_task');
+task.query();
+
+while(task.next()){
+
+    data.tasks.push({
+
+        number : task.getDisplayValue(),
+        short_description : task.getDisplayValue('short_description'),
+        assigned_to : task.getDisplayValue('assigned_to'),
+        state : task.getDisplayValue('state')
+
+    });
+
+}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-04 09:16:54</sys_created_on>
+        <sys_id>f6a2adbac33543d4d7a5b8ddd4013130</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>ENAMS Admin Workspace</sys_name>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_update_name>sp_widget_f6a2adbac33543d4d7a5b8ddd4013130</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-04 09:42:52</sys_updated_on>
+        <template><![CDATA[<div class="admin-workspace">
+
+    <div class="workspace-header">
+
+        <h1>Admin Workspace</h1>
+
+        <p>
+            Monitor, manage, and fulfill enterprise network access requests.
+        </p>
+
+    </div>
+
+    <div class="summary-grid">
+
+        <div class="summary-card">
+            <h3>Total Requests</h3>
+            <h2>{{data.total}}</h2>
+        </div>
+
+        <div class="summary-card">
+            <h3>Pending</h3>
+            <h2>{{data.pending}}</h2>
+        </div>
+
+        <div class="summary-card">
+            <h3>Approved</h3>
+            <h2>{{data.approved}}</h2>
+        </div>
+
+        <div class="summary-card">
+            <h3>Completed</h3>
+            <h2>{{data.completed}}</h2>
+        </div>
+
+    </div>
+  <div class="pending-section">
+
+    <h2>Pending Requests</h2>
+
+    <table class="pending-table">
+
+        <thead>
+
+            <tr>
+                <th>Request</th>
+                <th>Type</th>
+                <th>Requested For</th>
+                <th>Priority</th>
+                <th>Status</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr ng-repeat="req in data.requests">
+
+                <td>{{req.number}}</td>
+                <td>{{req.type}}</td>
+                <td>{{req.requester}}</td>
+                <td>{{req.priority}}</td>
+                <td>{{req.state}}</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+  <div class="tasks-section">
+
+    <h2>Fulfillment Tasks</h2>
+
+    <table class="tasks-table">
+
+        <thead>
+
+            <tr>
+                <th>Task</th>
+                <th>Description</th>
+                <th>Assigned To</th>
+                <th>State</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr ng-repeat="task in data.tasks">
+
+                <td>{{task.number}}</td>
+                <td>{{task.short_description}}</td>
+                <td>{{task.assigned_to}}</td>
+                <td>{{task.state}}</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

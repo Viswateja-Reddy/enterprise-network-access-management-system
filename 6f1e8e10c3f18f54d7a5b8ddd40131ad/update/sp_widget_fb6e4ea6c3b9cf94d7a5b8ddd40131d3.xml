@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.stats-section{&#13;
+&#13;
+    display:flex;&#13;
+    justify-content:center;&#13;
+    gap:35px;&#13;
+    flex-wrap:wrap;&#13;
+    padding:80px 30px;&#13;
+    background:linear-gradient(135deg,#f5f7fa,#eef3f8);&#13;
+&#13;
+}&#13;
+&#13;
+.stat-card{&#13;
+&#13;
+    position:relative;&#13;
+    overflow:hidden;&#13;
+    width:240px;&#13;
+    height:170px;&#13;
+    background:#ffffff;&#13;
+    border-radius:18px;&#13;
+    display:flex;&#13;
+    flex-direction:column;&#13;
+    justify-content:center;&#13;
+    align-items:center;&#13;
+    text-align:center;&#13;
+    box-shadow:0 10px 25px rgba(15,76,129,.10);&#13;
+    border-top:6px solid #D4A017;&#13;
+    transition:all .4s ease;&#13;
+&#13;
+}&#13;
+&#13;
+.stat-card::before{&#13;
+&#13;
+    content:"";&#13;
+    position:absolute;&#13;
+    top:0;&#13;
+    left:-120%;&#13;
+    width:100%;&#13;
+    height:100%;&#13;
+    background:linear-gradient(&#13;
+        90deg,&#13;
+        transparent,&#13;
+        rgba(255,255,255,.45),&#13;
+        transparent&#13;
+    );&#13;
+&#13;
+    transition:.8s;&#13;
+&#13;
+}&#13;
+&#13;
+.stat-card:hover::before{&#13;
+&#13;
+    left:120%;&#13;
+&#13;
+}&#13;
+&#13;
+.stat-card:hover{&#13;
+&#13;
+    transform:translateY(-12px) scale(1.04);&#13;
+    box-shadow:0 18px 35px rgba(15,76,129,.18);&#13;
+&#13;
+}&#13;
+&#13;
+.stat-card h2{&#13;
+&#13;
+    font-size:52px;&#13;
+    margin:0;&#13;
+    color:#0F4C81;&#13;
+    font-weight:700;&#13;
+    transition:.35s;&#13;
+&#13;
+}&#13;
+&#13;
+.stat-card:hover h2{&#13;
+&#13;
+    transform:scale(1.08);&#13;
+&#13;
+}&#13;
+&#13;
+.stat-card p{&#13;
+&#13;
+    margin-top:15px;&#13;
+    color:#666;&#13;
+    font-size:18px;&#13;
+    font-weight:600;&#13;
+    letter-spacing:.3px;&#13;
+&#13;
+}&#13;
+&#13;
+@media(max-width:992px){&#13;
+&#13;
+    .stats-section{&#13;
+&#13;
+        gap:25px;&#13;
+&#13;
+    }&#13;
+&#13;
+    .stat-card{&#13;
+&#13;
+        width:260px;&#13;
+&#13;
+    }&#13;
+&#13;
+}&#13;
+&#13;
+@media(max-width:768px){&#13;
+&#13;
+    .stats-section{&#13;
+&#13;
+        flex-direction:column;&#13;
+        align-items:center;&#13;
+        padding:50px 20px;&#13;
+&#13;
+    }&#13;
+&#13;
+    .stat-card{&#13;
+&#13;
+        width:100%;&#13;
+        max-width:340px;&#13;
+&#13;
+    }&#13;
+&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>enams_statistics</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ENAMS Statistics</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+    data.total = 0;
+    data.pending = 0;
+    data.approved = 0;
+    data.completed = 0;
+
+    var gr = new GlideRecord('x_1958816_enterp_0_network_request');
+    gr.query();
+
+    while (gr.next()) {
+
+        data.total++;
+
+        var state = gr.getDisplayValue('state');
+
+        if (state == "Pending")
+            data.pending++;
+
+        if (state == "Approved")
+            data.approved++;
+
+        if (state == "Completed")
+            data.completed++;
+
+    }
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-03 17:49:36</sys_created_on>
+        <sys_id>fb6e4ea6c3b9cf94d7a5b8ddd40131d3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>ENAMS Statistics</sys_name>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_update_name>sp_widget_fb6e4ea6c3b9cf94d7a5b8ddd40131d3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-04 10:33:17</sys_updated_on>
+        <template><![CDATA[<div class="stats-section">
+
+    <div class="stat-card">
+        <h2>{{data.total}}</h2>
+        <p>Total Requests</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>{{data.pending}}</h2>
+        <p>Pending</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>{{data.approved}}</h2>
+        <p>Approved</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>{{data.completed}}</h2>
+        <p>Completed</p>
+    </div>
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

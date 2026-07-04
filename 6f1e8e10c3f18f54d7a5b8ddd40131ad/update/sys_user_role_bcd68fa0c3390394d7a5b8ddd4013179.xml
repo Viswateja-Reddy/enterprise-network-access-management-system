@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>Allows administrators to configure, maintain, and manage the ENAMS application and its security settings.</description>
+        <elevated_privilege>false</elevated_privilege>
+        <federated_id>zvTCVEMxOldNl4hbH9HP1CazxHgWonWOLFakp/17XUM=</federated_id>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_1958816_enterp_0.enams_admin</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>enams_admin</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-27 16:47:59</sys_created_on>
+        <sys_id>bcd68fa0c3390394d7a5b8ddd4013179</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1958816_enterp_0.enams_admin</sys_name>
+        <sys_package display_value="Enterprise Network Access Management System" source="x_1958816_enterp_0">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Enterprise Network Access Management System">6f1e8e10c3f18f54d7a5b8ddd40131ad</sys_scope>
+        <sys_update_name>sys_user_role_bcd68fa0c3390394d7a5b8ddd4013179</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-27 16:47:59</sys_updated_on>
+    </sys_user_role>
+</record_update>
